@@ -6,10 +6,12 @@
 
 ### 基本原理
 
+![CAPTCHA](src/test/resources/2.jpg)
+
 * 使用 `gm` 对验证码图片进行降噪
 
 ```bash
-gm convert 1.jpg +profile '*' -threshold '22%' test_1.jpg
+gm convert 2.jpg +profile '*' -threshold '22%' test_2.jpg
 ```
 
 * 对降噪之后的验证码图片进行识别
@@ -19,6 +21,7 @@ tesseract test_2.jpg  -psm 7 r
 ```
 
 * 查看结果
+
 ```bash
 cat r.txt
 ZLQE
