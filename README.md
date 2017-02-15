@@ -29,3 +29,7 @@ ZLQE
 代码实现：[OCR](src/main/java/com/github/tonydeng/tesseract/OCR.java)
 
 测试方法：[OCRTest](src/test/java/com/github/tonydeng/tesseract/OCRTest.java)
+
+# Tesseract OCR使用
+
+参见之前写的一篇Blog，[利用Tesseract图片文字识别初探](https://tonydeng.github.io/2016/07/28/on-the-use-of-tesseract-picture-text-recognition/)，对Tesseract的安装和使用详细介绍。
