@@ -15,7 +15,19 @@ import java.util.List;
 public class OCRTest extends BaseTest {
 
     private final String path = this.getClass().getClassLoader().getResource("").getPath();
-    private static List<String> imgs = Arrays.asList("1", "2", "3");
+    private static List<String> imgs = Arrays.asList("1", "2", "3", "4");
+
+    @Test
+    public void testProcessImgByImageIO() {
+        imgs.forEach(
+                i -> {
+                    Assert.assertTrue(FileUtils.isNotEmpty(Paths.get(path, i + ".jpg")));
+
+                    OCR.processImgByImageIO(Paths.get(path, i + ".jpg").toString(),
+                            Paths.get(path, "t_" + i + ".jpg").toString());
+                }
+        );
+    }
 
     @Test
     public void testProcessImg() {
